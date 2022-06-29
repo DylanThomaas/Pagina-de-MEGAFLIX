@@ -1,4 +1,4 @@
-const expresiones = {asd
+const expresiones = {
 	usuario: /^[a-zA-Z\_\-]+[0-9]{1,16}$/, // Letras, numeros, guion y guion_bajo
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
