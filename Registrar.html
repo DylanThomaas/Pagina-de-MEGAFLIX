@@ -7,23 +7,23 @@
     <title>Registrarse</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&d isplay=swap" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 </head>
 <body class="fondo">
     <header>
         <div class="contenedor">
             <h2 class="logotipo">MEGAFLIX</h2>
-     </header>
+    </header>
     <main>
         <section class="contenedor">
-                <div class="perfil"> 
-                    <div class="datos"> <!--        IMAGEN        -->
+            <div class="perfil"> 
+                <div class="datos"> <!--        IMAGEN        -->
                         <img src="img/persona.png"/>
                         <h1>Usuario</h1>
-                    </div>
-                    <div class="datos" ><!--        USUARIO        -->
-             <form action="#" method="post" id="form" class="formInput" name="formulario" >
+                </div>
+                <div class="datos" ><!--        USUARIO        -->
+                        <form action="#" method="post" id="form" class="formInput" name="formulario" >
                             <div class="inputBox" id="grupoNombre">
                                     <div>
                                         <input class="formulario" type="text"  id="nombre" name="nombre"  >
@@ -61,8 +61,8 @@
                                     <p id="mensajeErrorRepetir"></p>
                                 </div>                               
 
-                    </div>
-                    <div class="datos"><!--        METODO DE PAGO        -->
+                </div>
+                <div class="datos"><!--        METODO DE PAGO        -->
                             <h4>Metodo de pago</h4>
                             <div class="inputBox" >
                                 <input id="tipoTarjeta" type="radio" name="tipoPago" value="tarjetaCredito" > Tarjeta de Credito <br>
@@ -88,11 +88,10 @@
                             </div>
                             <button class="bton" name="confirmar" >Confirmar</button>
                             <a href="Login.html"><input class="bton" type="button" name="Cancelar " value="Cancelar"> </a>
-                    </div>
-                </div> 
-            </form>
+                </div>
+                </form>
+            </div> 
         </section>
-
     </main>
     <script src="js/script.js"></script>
 </body>

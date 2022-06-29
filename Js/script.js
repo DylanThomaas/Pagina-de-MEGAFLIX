@@ -67,8 +67,6 @@ const validarCampoNombre=(expresion, input, campo)=>{
     if(expresion.test(input.value)){ 
         document.getElementById(`grupo${campo}`).classList.remove(`mensajeError${campo}`);  
         mensajeErrorNombre.innerHTML =  ``;
-        nombre= true;
-        error=0;
     } else {
         mensajeErrorNombre.innerHTML =  `El nombre tiene que ser solo letras`;
         document.getElementById(`grupo${campo}`).classList.add(`mensajeError${campo}`);  
@@ -207,14 +205,15 @@ form.addEventListener("submit", e=>{
     e.preventDefault();
     for (x=0; x < 1; x ++){
         if (checked>0){
-
+            comprobarOK();
             radio=true;
             if(usuario && nombre && apellido && correo &&contraseña && repetir && tarjeta && codigo && radio){
                 guardarlocalstorage();
+                console.log("entro") 
                if(error==0){
                 form.reset();
                } else{
-                alert('Debe llenar los campos como corresponde')
+                alert('Debe llenar todos los campos como corresponde')
                }
            };
         }else{
@@ -224,6 +223,71 @@ form.addEventListener("submit", e=>{
     };
 
 });
+function comprobarOK(){
+ 
+    let nombre1=document.getElementById("nombre").value;
+    let apellido1=document.getElementById("apellido").value;
+    let correo1=document.getElementById("correo").value;
+    let usuario1=document.getElementById("usuario").value;
+    let contraseña1=document.getElementById("contraseña").value;
+    let repetir1=document.getElementById("repetir").value;
+
+
+    if(nombre1==""){
+        mensajeErrorNombre.innerHTML =  `El Campo es Obligatorio`;
+        document.getElementById(`grupoNombre`).classList.add(`mensajeErrorNombre`);  
+        error++;
+        nombre=false
+    }else{
+        error=0;
+        nombre=true
+    }
+    if(apellido1==""){
+        mensajeErrorApellido.innerHTML =  `El Campo es Obligatorio`;
+        document.getElementById(`grupoApellido`).classList.add(`mensajeErrorApellido`);  
+        error++;
+        apellido=false
+    }else{
+        error=0;
+        apellido=true
+    }
+    if(correo1==""){
+        mensajeErrorCorreo.innerHTML =  `El Campo es Obligatorio`;
+        document.getElementById(`grupoCorreo`).classList.add(`mensajeErrorCorreo`);  
+        error++;
+        correo=false
+    }else{
+        error=0;
+        correo=true
+    }
+    if(usuario1==""){
+        mensajeErrorUsuario.innerHTML =  `El Campo es Obligatorio`;
+        document.getElementById(`grupoUsuario`).classList.add(`mensajeErrorUsuario`);  
+        error++;
+        usuario=false
+    }else{
+        error=0;
+        usuario=true
+    }
+    if(contraseña1==""){
+        mensajeErrorContraseña.innerHTML =  `El Campo es Obligatorio`;
+        document.getElementById(`grupoContraseña`).classList.add(`mensajeErrorContraseña`);  
+        error++;
+        contraseña=false
+    }else{
+        error=0;
+        contraseña=true
+    }
+    if(repetir1==""){
+        mensajeErrorRepetir.innerHTML =  `El Campo es Obligatorio`;
+        document.getElementById(`grupoRepetir`).classList.add(`mensajeErrorRepetir`);  
+        error++;
+        repetir=false
+    }else{
+        error=0;
+        repetir=true
+    }
+}
 
 function guardarlocalstorage(){ 
 
@@ -246,13 +310,17 @@ function guardarlocalstorage(){
     localStorage.setItem("codigo", codigo);
 };
 /*---- ---- VER EL LOGIN ---- ---- */
-function obtenerlocalstorage(){ 
+/*function obtenerlocalstorage(){ 
  
     if(localStorage.setItem("usuario")&&localStorage.setItem("contraseña")){
         console.log(nombre)
     }else{
         console.log("no hay nada")
     }
+}
+
+function acceder(){
+
 }
 
 

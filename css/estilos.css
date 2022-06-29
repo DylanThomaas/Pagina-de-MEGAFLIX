@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
 }
 
 :root{
@@ -26,7 +26,8 @@
     color: black;
     font-size: 1.12em; 
     height: 45px;
-    width: 100px;
+    width:100%;
+    max-width: 100px;
 }
 .buscar:hover{    
     color: rgb(248, 244, 244);
@@ -35,7 +36,8 @@
 
 }
 .columna1{
-	width: 200px;
+	width: 100%px;
+    max-width: 200px;
 	height: 200px;
 	position: absolute;
 	left: 0;
@@ -86,6 +88,7 @@
 .banner{
 	border-radius: 20px;
 	width: 100%;
+    max-width: 2000px;
 }
 
 
@@ -121,7 +124,7 @@ header .contenedor{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100hv;
+    min-height: 100px;
     flex-direction: column;
     gap: 10px;
 
@@ -141,17 +144,16 @@ input{
 
 .inputBox{
     position: relative;
-    width: 450px;
 
 }
 .formInput input{
-    width: 300px;
+    width: 85%;
 }
 
 .inputBox span{
     position: absolute;
     left: 0;
-    padding: 15px;
+    padding: 15px;  
     pointer-events: none;
     font-size: 1em;
     color: var(--letra);
@@ -187,11 +189,16 @@ input:focus ~ span{
 
 .perfil{
     border: 0.2em solid var(--letra);   
-    padding: 10px 150px ;
+    padding: auto;
     font-family: 'Open Sans', sans-serif;
     color: var(--letra);
-    display: grid;
-    grid-template-columns: 500px 500px 500px; 
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* grid-template-columns: 500px 500px 500px;  */
+
 }   
 .A{
     grid-column: 3;
@@ -345,7 +352,8 @@ header nav a.activo{
 }
 
 img{
-    width:243px;
+    width: 100%;
+    max-width:243px;
     border-radius: 10px;
 }
 
@@ -362,10 +370,10 @@ main a.activo{
 
 .muestra-end{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap:wrap;
     width: 100%;
-    margin: auto 100px  ;
+    margin: auto  ;
 }   
 
 .titulo{
@@ -382,7 +390,7 @@ main a.activo{
     font-weight: normal;
     font-size: 1em;
     line-height: 1.75em;
-    max-width: 50%;
+    width: 50%;
     margin-bottom: 1.25em;
 }
 .boton{
@@ -688,3 +696,39 @@ main .boton.activo{
     margin-bottom: 6.25em;
 }
 
+
+
+/* ---- ---- Responsive ---- ----*/
+
+
+@media screen and (max-width:1000px){
+    .descripcion{
+        width: 75%;}
+}
+@media screen and (max-width:1300px){
+    .descripcion{
+        width: 50%;}
+}
+@media screen and (max-width:900px){
+    .logotipo{
+        display: none;
+    }
+    main{
+        width: 100%;
+    }
+    .descripcion{
+        width: 100%;}
+}
+@media screen and (max-width:400px){
+    .contenedor{
+        width: 100%;
+    }
+    main{
+        width: 100%;
+    }
+    .formInput{
+        width: auto;
+    }
+    .descripcion{
+        width: 100%;}
+}
