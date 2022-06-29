@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&d isplay=swap" rel="stylesheet">
+	<title>Recuperar Contraseña</title>
+</head>
+<body class="fondo">
+	<header>
+        <div class="contenedor">
+            <h2 class="logotipo">MEGAFLIX</h2>
+     </header>
+<main >
+	<section class="contenedor">
+		<div class="datos">
+			<h1> Recuperar Contraseña</h1>
+			<form action="#" method="post" id="form" class="inicio">
+				<div class="inputBox" id="grupoCorreo">
+					<input class="inputLogin"  id="correo" name="correo" required="required">
+					<span>Correo Electronico</span>
+					<p id="mensajeErrorCorreo"></p>
+				</div>
+				<div class="inputBox" id="grupoUsuario" >
+					<input  class="inputLogin" type="text"  id="usuario" name="usuario"  required="required">
+					<span>Nombre de Usuario</span>
+					<p id="mensajeErrorUsuario"></p>
+				</div>
+				<div>
+					<button class="bton" name="confirmar">Enviar correo</button>
+					<a href="Login.html"><input class="bton" type="button" value="Cancelar"></a>
+				</div>
+			</form>
+		</div>
+	</section>
+	<script src="js/script.js"></script>
+</main>
+</body>
+</html>

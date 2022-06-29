@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&d isplay=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">MEGAFLIX</h2>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="Series.html">Series</a>
+                <a href="Peliculas.html">Peliculas</a>
+                <a href="Perfil.html">Perfil</a>
+                <a href="Login.html">Cerrar sesion</a>
+            </nav>
+        </div>
+     </header>
+    <main>
+        <section class="contenedor">
+            <form  action="#" method="post" id="form" >
+                <div class="perfil">
+                    <div class="datos">
+                        <img src="img/persona.png"/>
+                        <h1>Usuario</h1>
+                    </div>
+                    <div class="datos">
+                        <h2>Email: DesarrolloWeb@gmail.com </h2>
+                        <h2>Contraseña: Unlam123</h2>
+                        <form action="#" method="post" id="form">
+                            <div class="inputBox">
+                                <input type="text"  id="nueva" name="nueva" required="required">
+                                <span>Nueva Contraseña</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text"  id="nueva" name="nueva"  required="required" >
+                                <span>Repetir Contraseña</span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="datos">
+                            <h4>Metodo de pago</h4>
+                            <div class="inputBox">
+                                <div>
+                                    <input id="tarjeta de credito" type="radio" name="tipo de pago" value="tarjeta de credito"> Tarjeta de Credito 
+                                    <input type="text" pepattern="[0-9] {16}" required="required">  
+                                    <span>Numero de tarjeta</span>
+                                    <input type="text" pattern="[0-9] {3}" required="required">
+                                    <span>Codigo de seguridad</span>
+                                </div>
+                            </div>
+                            <div>
+                                <input id="Cupon de pago" type="radio" name="tipo de pago" value="cupon de pago"> Cupon de pago <br>
+                                <input id="pagofacil" type="checkbox" name="pagofacil" value="pagofacil"> <label for="pagofacil"> Pagofacil </label>
+                                <input id="rapipago" type="checkbox" name="rapipago" value="rapipago"> <label for="rapipago"> Rapipago </label>
+                            </div>
+                            <div>
+                                <input id="Transferencia Bancaria" type="radio" name="tipo de pago" value="Transferencia Bancaria"> Trasnferencia Bancaria <br>
+                                <label for="cbu">CBU: 3009807564345678965643</label>
+                            </div>
+
+                    </div>
+                    <div class="box A">
+                        <a href="index.html"><input class="bton" type="submit" name="cambios " value="Guardar cambios"></a>
+                        <a href="index.html"><input class="bton" type="button" name="cancelar " value="Cancelar"> </a>
+                    </div>
+                </div> 
+            </form>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

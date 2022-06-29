@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&d isplay=swap" rel="stylesheet">
+
+
+</head>
+<body class="fondo">
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">MEGAFLIX</h2>
+     </header>
+    <main>
+        <section class="contenedor">
+                <div class="perfil"> 
+                    <div class="datos"> <!--        IMAGEN        -->
+                        <img src="img/persona.png"/>
+                        <h1>Usuario</h1>
+                    </div>
+                    <div class="datos" ><!--        USUARIO        -->
+             <form action="#" method="post" id="form" class="formInput" name="formulario" >
+                            <div class="inputBox" id="grupoNombre">
+                                    <div>
+                                        <input class="formulario" type="text"  id="nombre" name="nombre"  >
+                                        <span>Nombre</span>
+                                    </div>
+                                    <p id="mensajeErrorNombre"></p>
+                                </div>
+                                <div class="inputBox" id="grupoApellido">
+                                    <div>
+                                        <input class="formulario"type="text"  id="apellido" name="apellido"   >
+                                        <span>Apellido</span>
+                                    </div>
+                                    <p id="mensajeErrorApellido"></p>
+                                </div>
+                                <div class="inputBox"  id="grupoCorreo">
+                                    <div>
+                                        <input  id="correo" name="correo" >
+                                        <span>Correo Electronico</span>
+                                    </div>
+                                    <p id="mensajeErrorCorreo"></p>
+                                </div>
+                                <div class="inputBox" id="grupoUsuario" >
+                                    <input type="text"  id="usuario" name="usuario"  >
+                                    <span>Nombre de Usuario</span>
+                                    <p id="mensajeErrorUsuario"></p>
+                                </div>
+                                <div class="inputBox" id="grupoContraseña" >
+                                    <input type="password"  id="contraseña" name="contraseña" >
+                                    <span>Contraseña</span>
+                                    <p id="mensajeErrorContraseña"></p>
+                                </div>
+                                <div class="inputBox" id="grupoRepetir">
+                                    <input type="password"  id="repetir" name="repetir"  >
+                                    <span>Repetir Contraseña</span>
+                                    <p id="mensajeErrorRepetir"></p>
+                                </div>                               
+
+                    </div>
+                    <div class="datos"><!--        METODO DE PAGO        -->
+                            <h4>Metodo de pago</h4>
+                            <div class="inputBox" >
+                                <input id="tipoTarjeta" type="radio" name="tipoPago" value="tarjetaCredito" > Tarjeta de Credito <br>
+                                <div id="grupoTarjeta">
+                                    <input type="text" name="nroTarjeta" id="tarjeta"  >  
+                                    <span>Numero de tarjeta</span>
+                                    <p id="mensajeErrorTarjeta"></p>
+                                </div>
+                                <div id="grupoCodigo">
+                                    <input type="text" name="codSeguridad" id="codigo"  >
+                                    <span>Codigo de seguridad</span>
+                                    <p id="mensajeErrorCodigo"></p>
+                                </div>
+                            </div>
+                            <div class="inputBox">
+                                <input id="tipoEfectivo" type="radio" name="tipoPago" value="cuponPago"> Cupon de pago <br>
+                                <input id="pagoFacil" type="checkbox" name="pagoFacil" value="pagofacil"> <label for="pagoFacil"> Pagofacil </label>
+                                <input id="rapiPago" type="checkbox" name="rapiPago" value="rapipago"> <label for="rapiPago"> Rapipago </label><br><br>
+                            </div>
+                            <div class="inputBox">
+                                <input id="tipoTransferencia" type="radio" name="tipoPago" value="transferenciaBancaria"> Trasnferencia Bancaria <br>
+                                <label for="cbu">CBU: 3009807564345678965643</label>
+                            </div>
+                            <button class="bton" name="confirmar" >Confirmar</button>
+                            <a href="Login.html"><input class="bton" type="button" name="Cancelar " value="Cancelar"> </a>
+                    </div>
+                </div> 
+            </form>
+        </section>
+
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

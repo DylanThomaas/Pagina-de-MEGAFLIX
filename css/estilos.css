@@ -1,0 +1,690 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fondo: #040b13;
+    --letra: #AAA;
+    --hover: #fff;
+
+}
+.Recuperar_contraseña{
+	margin-left: 40%;
+	margin-top: 10%;
+}
+.buscadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buscar{
+    background: var(--letra);
+    border: none;
+    border-radius: 0.31em;
+    color: black;
+    font-size: 1.12em; 
+    height: 45px;
+    width: 100px;
+}
+.buscar:hover{    
+    color: rgb(248, 244, 244);
+    background-color: var(--fondo);
+    border: 0.1em solid rgb(235, 228, 228);
+
+}
+.columna1{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 0;
+	top: 100px;
+}
+.columna2{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 100px;
+}
+
+.CVV{
+	width: 20px;
+	padding: 10px;
+}
+.fondo{
+    background-color: var(--fondo) ;
+}
+
+.inicio{
+	text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+.inicio h1{
+    color: var(--letra);
+    font-size: 2em;
+    margin-top: 50px;
+    text-decoration: underline  ;
+}
+.bton{    
+    background: var(--letra);
+    border: none;
+    border-radius: 0.31em;
+    color: black;
+    font-size: 1.2em;
+    height: 50px;
+    width: 200px;
+}
+.bton:hover{
+    color: rgb(248, 244, 244);
+    background-color: var(--fondo);
+    border: 0.1em solid rgb(235, 228, 228);
+
+}
+.banner{
+	border-radius: 20px;
+	width: 100%;
+}
+
+
+body{
+    background-color:var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    padding: 30px;
+}
+
+header nav a:hover{
+    color: var(--hover);
+}
+
+/*-------------------contenedor------------*/
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/*-------------------Registrarse ---------------------*/ 
+.datos{
+    font-family: 'Open Sans', sans-serif;
+    align-items:flex-end;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100hv;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+input{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--fondo);
+    border: 2px solid var(--letra);
+    color: #fff;
+    outline: none;
+    font-size: 1em;
+    margin: 5px;
+
+}
+
+.inputBox{
+    position: relative;
+    width: 450px;
+
+}
+.formInput input{
+    width: 300px;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 15px;
+    pointer-events: none;
+    font-size: 1em;
+    color: var(--letra);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+
+input:valid ~ span,
+input:focus ~ span{
+    color: var(--letra);
+    transform: translateX(10px) translate(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background-color: var(--fondo);
+
+}
+.datos .bton{
+    background: rgb(235, 228, 228);
+    border: none;
+    border-radius: 0.31em;
+    color: black;
+    margin-right: 1.25em;
+    font-size: 1.12em; 
+
+}
+.datos .bton:hover{
+    color: rgb(248, 244, 244);
+    background-color: var(--fondo);
+    border: 0.1em solid rgb(235, 228, 228);
+
+}
+
+.perfil{
+    border: 0.2em solid var(--letra);   
+    padding: 10px 150px ;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--letra);
+    display: grid;
+    grid-template-columns: 500px 500px 500px; 
+}   
+.A{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.perfil h1 {
+  padding: 0px 65px ;
+}
+form{
+    margin: 15px;
+    padding: 5px;
+}
+ form h4{
+    font-size: 2em;
+    color: #fff;
+ }
+  h4{
+    font-size: 2em;
+    color: #fff;
+ }
+
+
+/*-------------------Registrarse Error ---------------------*/ 
+.mensajeError {
+    color: red;
+    margin-left: 10px;
+}
+.mensajeErrorNombre {
+    color: red;
+}
+.mensajeErrorApellido {
+    color: red;
+}
+.mensajeErrorCorreo{
+    color: red;
+}
+.mensajeErrorUsuario {
+    color: red;
+}
+.mensajeErrorContraseña {
+    color: red;
+}
+.mensajeErrorRepetir {
+    color: red;
+}
+.mensajeErrorTarjeta {
+    color: red;
+}
+.mensajeErrorCodigo{
+    color: red;
+}
+
+ /*--------------------------Inicio--------------------*/
+ .inputBoxInicio{
+    position: relative;
+}
+
+ .inputBoxInicio span{
+    position: absolute;
+    left: 0;
+    padding: 15px;
+    pointer-events: none;
+    font-size: 1em;
+    color: var(--letra);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.inputLogin{
+    width: 430px;
+}
+/*----------------------------------- Recuperar ---------------*/
+.inputBoxRecu{
+    position: relative;
+    height: 200px;
+}
+
+ .inputBox span{
+    padding-left: 15px;
+    padding-top: 14px;
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    font-size: 1em;
+    color: var(--letra);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+input:valid ~ span,
+input:focus ~ span{
+    color: var(--letra);
+    transform: translateX(10px) translate(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background-color: var(--fondo);
+
+}
+.datos h1{
+    color: var(--letra);
+    font-size: 2em;
+}
+/*----------------------------------- Header ---------------*/
+
+header .logotipo{
+    margin: 0%;
+    font-weight: normal;
+    color: var(--letra);
+    font-size: 40px;
+    transform: scaleX(1.8);
+}
+
+header nav a{
+    color: var(--letra);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo{
+    color: var(--letra);
+
+}
+/*----------------------------------- Main ---------------*/
+.muestras{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 50px auto;
+}
+.buscador{
+    display: flex;
+    justify-content:center;
+    width: 80%;
+    margin: auto;
+
+}
+
+.carta{
+    padding: 1rem;
+    min-height: 400px;
+    min-width: 200px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+img{
+    width:243px;
+    border-radius: 10px;
+}
+
+main a{
+    color: var(--letra);
+}
+
+main a:hover,
+main a.activo{
+    color: var(--hover);
+}
+
+/*----------------------------Muestra-end-----------------------------*/
+
+.muestra-end{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+    width: 100%;
+    margin: auto 100px  ;
+}   
+
+.titulo{
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+.subtitulo{
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.descripcion{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+.boton{
+    background: rgb(235, 228, 228);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: black;
+    margin-right: 1.25em;
+    font-size: 1.12em; 
+}
+main .boton:hover,
+main .boton.activo{
+    color: rgb(248, 244, 244);
+    background-color: black;
+}
+
+/*----------------------------Peliculas Doctor-----------------------------*/
+
+.pelicula-pp-doctor{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/doctor2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-doctor .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+
+/*----------------------------Peliculas fantastic-----------------------------*/
+
+.pelicula-pp-fantastic{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/fantastic2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-fantastic .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+
+
+/*----------------------------Peliculas firestarter-----------------------------*/
+.pelicula-pp-firestarter{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/firestarter2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-firestarter .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+
+
+/*----------------------------Peliculas massive-----------------------------*/
+.pelicula-pp-massive{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/massive2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-massive .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+
+/*----------------------------Peliculas medium-----------------------------*/
+.pelicula-pp-medium{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/medium2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-medium .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+/*----------------------------Peliculas memory-----------------------------*/
+.pelicula-pp-memory{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/memory2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-memory .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+
+/*----------------------------Peliculas interestellar-----------------------------*/
+.pelicula-pp-interestellar{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/interestellar2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-interestellar .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+
+/*----------------------------Peliculas sonic-----------------------------*/
+.pelicula-pp-sonic{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/sonic2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-sonic .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+/*----------------------------Serie 100-----------------------------*/
+
+.pelicula-pp-100{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/1002.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-100 .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+/*----------------------------Serie dead-----------------------------*/
+
+.pelicula-pp-dead{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/dead2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-dead .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+/*----------------------------Serie mentirosas-----------------------------*/
+
+.pelicula-pp-mentirosas{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/mentirosas2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-mentirosas .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+/*----------------------------Serie modern-----------------------------*/
+
+.pelicula-pp-modern{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/modern2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-modern .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+/*----------------------------Serie ozark-----------------------------*/
+
+.pelicula-pp-ozark{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/ozark2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-ozark .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+/*----------------------------Serie papel-----------------------------*/
+
+.pelicula-pp-papel{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/papel2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-papel .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
+
+/*----------------------------Serie prison-----------------------------*/
+
+.pelicula-pp-prison{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/prison2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-prison .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+/*----------------------------Serie vampiro-----------------------------*/
+
+.pelicula-pp-vampiro{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: var(--letra);
+    background:linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.5)100%), url(img/vampiro2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.pelicula-pp-vampiro .contenedor{
+    margin: 0% auto;
+    margin-bottom: 6.25em;
+}
+
