@@ -120,7 +120,7 @@ const validarCampoContraseña=(expresion, input, campo)=>{
         contraseña= true;
                 error=0;
     } else {
-        mensajeErrorContraseña.innerHTML =  `El Contraseña tiene que contener 8 caracteres ( mínimo 2 letras, 2 números y 2 caracteres especiales)`;
+        mensajeErrorContraseña.innerHTML =  `El Contraseña tiene que contener 8 caracteres`;
         document.getElementById(`grupo${campo}`).classList.add(`mensajeError${campo}`);  
         error++; 
     } 
@@ -224,7 +224,7 @@ form.addEventListener("submit", e=>{
 
 });
 function comprobarOK(){
- 
+    
     let nombre1=document.getElementById("nombre").value;
     let apellido1=document.getElementById("apellido").value;
     let correo1=document.getElementById("correo").value;
@@ -309,6 +309,9 @@ function guardarlocalstorage(){
     localStorage.setItem("tarjeta", tarjeta);
     localStorage.setItem("codigo", codigo);
 };
+
+
+
 /*---- ---- VER EL LOGIN ---- ---- */
 /*function obtenerlocalstorage(){ 
  

@@ -14,27 +14,7 @@
 	margin-left: 40%;
 	margin-top: 10%;
 }
-.buscadores{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.buscar{
-    background: var(--letra);
-    border: none;
-    border-radius: 0.31em;
-    color: black;
-    font-size: 1.12em; 
-    height: 45px;
-    width:100%;
-    max-width: 100px;
-}
-.buscar:hover{    
-    color: rgb(248, 244, 244);
-    background-color: var(--fondo);
-    border: 0.1em solid rgb(235, 228, 228);
 
-}
 .columna1{
 	width: 100%px;
     max-width: 200px;
@@ -220,8 +200,47 @@ form{
     font-size: 2em;
     color: #fff;
  }
+ /*-------------------Buscador ---------------------*/ 
+form .select{
+    background: var(--fondo);
+    border: 3px;
+    border-radius: 0.31em;
+    color: white;
+    font-size: 1.12em; 
+    height: 45px;
+    width:100%;
+    max-width: 400px;
+    margin-left: 60px;
+}
+.buscadores{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-left:90px;
+}
+.formBuscador{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 60px;
+}
+.buscar{
+    background: var(--letra);
+    border: none;
+    border-radius: 0.31em;
+    color: black;
+    font-size: 1.12em; 
+    height: 45px;
+    width:100%;
+    max-width: 100px;
+}
+.buscar:hover{    
+    color: rgb(248, 244, 244);
+    background-color: var(--fondo);
+    border: 0.1em solid rgb(235, 228, 228);
 
-
+}
 /*-------------------Registrarse Error ---------------------*/ 
 .mensajeError {
     color: red;
@@ -336,10 +355,8 @@ header nav a.activo{
     margin: 50px auto;
 }
 .buscador{
-    display: flex;
-    justify-content:center;
     width: 80%;
-    margin: auto;
+    margin: 10px;
 
 }
 
