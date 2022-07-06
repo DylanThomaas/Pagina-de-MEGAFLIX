@@ -12,23 +12,45 @@ $(document).ready(function(){
 });
 
 function Funcion(){
-    let buscar=document.getElementById("buscador").value;
-    console.log(buscar)
+
+    if(($("#categoria option:selected").val()=="0")){
+        $("#accion, #misterio, #comedia, #terror, #drama, #cienciaFiccion, #policial, #suspenso, #fantasia").show();
+    }
     if(($("#categoria option:selected").val()=="1")){
-        $("#accion, #misterio, #comedia, #terror, #drama, #cienciaFiccion, #policial, #suspenso, #fantasia").hide();
-        console.log("hola")
+        $("#accion, #misterio, #comedia, #terror, #drama, #cienciaFiccion, #policial, #suspenso").hide();
+        $("#fantasia").show();
     }
     if(($("#categoria option:selected").val()=="2")){
-        $("#fantasia").hide();
-        $("#misterio").hide();
-        $("#comedia").hide();
-        $("#terror").hide();
-        $("#drama").hide();
-        $("#cienciaFiccion").hide();
-        $("#policial").hide();
-        $("#suspenso").hide();
+        $("#fantasia, #misterio, #comedia, #terror, #drama, #cienciaFiccion, #policial, #suspenso").hide();
         $("#accion").show();
-        console.log("hola")
+    }
+    if(($("#categoria option:selected").val()=="3")){
+        $("#fantasia, #accion, #comedia, #terror, #drama, #cienciaFiccion, #policial, #suspenso").hide();
+        $("#misterio").show();
+    }
+    if(($("#categoria option:selected").val()=="4")){
+        $("#fantasia, #misterio, #accion, #terror, #drama, #cienciaFiccion, #policial, #suspenso").hide();
+        $("#comedia").show();
+    }
+    if(($("#categoria option:selected").val()=="5")){
+        $("#fantasia, #misterio, #comedia, #accion, #drama, #cienciaFiccion, #policial, #suspenso").hide();
+        $("#terror").show();
+    }
+    if(($("#categoria option:selected").val()=="6")){
+        $("#fantasia, #misterio, #comedia, #terror, #accion, #cienciaFiccion, #policial, #suspenso").hide();
+        $("#drama").show();
+    }
+    if(($("#categoria option:selected").val()=="7")){
+        $("#fantasia, #misterio, #comedia, #terror, #drama, #accion, #policial, #suspenso").hide();
+        $("#cienciaFiccion").show();
+    }
+    if(($("#categoria option:selected").val()=="8")){
+        $("#fantasia, #misterio, #comedia, #terror, #drama, #accion, #cienciaFiccion, #suspenso").hide();
+        $("#policial").show();
+    }
+    if(($("#categoria option:selected").val()=="9")){
+        $("#fantasia, #misterio, #comedia, #terror, #drama, #accion, #policial, #cienciaFiccion").hide();
+        $("#suspenso").show();
     }
 
 }
