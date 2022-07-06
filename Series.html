@@ -26,43 +26,27 @@
 
     <main>
         <section class="buscadores">
-            <article class="buscador">
-                <form type="#" method="get">
-                    <datalist id="categoria">
-                        <option value="Fantasia">
-                        <option value="Accion">
-                        <option value="Misterio">
-                        <option value="Comedia">
-                        <option value="Terror">
-                        <option value="Drama">
-                        <option value="Ciencia Ficcion">
-                        <option value="Policial">
-                        <option value="Suspenso">
-                    </datalist>
-                    <label for="busqueda">Busqueda por nombre</label>
-                    <input type="text" name="genero" list="busqueda">
-                   <input class="buscar" type="submit" value="Buscar">
-                </form>
-            </article>
-            <article class="buscador">
-                <form type="#" method="get">
-                    <datalist id="categoria">
-                        <option value="Fantasia">
-                        <option value="Accion">
-                        <option value="Misterio">
-                        <option value="Comedia">
-                        <option value="Terror">
-                        <option value="Drama">
-                        <option value="Ciencia Ficcion">
-                        <option value="Policial">
-                        <option value="Suspenso">
-                    </datalist>
-                    <label for="Categoria">Busqueda por categoria</label>
-                    <input type="text" name="genero" list="Categoria">
-                   <input class="buscar" type="submit" value="Buscar">
-                </form>
-            </article>
-        </section>
+            <form type="#" method="get" class="formBuscador">
+                <h3>Seleccione el género:</h3>    
+                <select id="categoria" class="select">
+                    <option value="0"></option>
+                    <option value="1">Fantasia</option>
+                    <option value="2">Accion</option>
+                    <option value="3">Misterio</option>
+                    <option value="4">Comedia</option>
+                    <option value="5">Terror</option>
+                    <option value="6">Drama</option>
+                    <option value="7">Ciencia Ficcion</option>
+                    <option value="8">Policial</option>
+                    <option value="9">Suspenso</option>
+                </select>
+                <input class="buscar" type="submit" value="Buscar">
+            </form>
+            <form type="#" method="get" class="formBuscador">
+                <input type="text" name="genero" list="Categoria">
+               <input class="buscar" type="submit" value="Buscar">
+            </form>
+    </section>
         <section class="muestras">
             <a href="Series/100.html" >
                 <div class="carta">

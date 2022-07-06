@@ -310,24 +310,37 @@ function guardarlocalstorage(){
     localStorage.setItem("codigo", codigo);
 };
 
-
-
-/*---- ---- VER EL LOGIN ---- ---- */
-/*function obtenerlocalstorage(){ 
- 
-    if(localStorage.setItem("usuario")&&localStorage.setItem("contraseña")){
-        console.log(nombre)
-    }else{
-        console.log("no hay nada")
-    }
-}
-
-function acceder(){
-
-}
-
-
 /*---- ---- TERMINO REGISTRAR ---- ---- */
+
+
+
+
+$(document).ready(function(){
+    $("#buscador").keyup(function(){
+        Funcion();
+        console.log("hola")   
+    });
+    $('select[name="categoria"]').change(function(){
+        Funcion();
+        console.log("hola")
+    });
+});
+$(document).ready(function(){
+
+});
+
+function Funcion(){
+
+    if(($("#categoria option:selected").val()==1)){
+        $("#accion").hide();
+        $("#terror").hide();
+        console.log("hola")
+        error=true
+    }
+
+}
+
+
 
 
 

@@ -8,6 +8,8 @@
     --fondo: #040b13;
     --letra: #AAA;
     --hover: #fff;
+    --input: #353535;
+
 
 }
 .Recuperar_contraseña{
@@ -99,7 +101,6 @@ header .contenedor{
 /*-------------------Registrarse ---------------------*/ 
 .datos{
     font-family: 'Open Sans', sans-serif;
-    align-items:flex-end;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -110,6 +111,11 @@ header .contenedor{
 
 }
 
+h3{
+    color: var(--letra);
+    padding: 10px;
+    width: 70%;
+}
 input{
     border-radius: 5px;
     padding: 10px;
@@ -174,7 +180,6 @@ input:focus ~ span{
     color: var(--letra);
     display: flex;
     width: 100%;
-    align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
     /* grid-template-columns: 500px 500px 500px;  */
@@ -203,14 +208,13 @@ form{
  /*-------------------Buscador ---------------------*/ 
 form .select{
     background: var(--fondo);
-    border: 3px;
+    border: 10px;
     border-radius: 0.31em;
     color: white;
     font-size: 1.12em; 
     height: 45px;
     width:100%;
     max-width: 400px;
-    margin-left: 60px;
 }
 .buscadores{
     display: flex;
@@ -229,7 +233,7 @@ form .select{
     background: var(--letra);
     border: none;
     border-radius: 0.31em;
-    color: black;
+    color: var(--fondo);
     font-size: 1.12em; 
     height: 45px;
     width:100%;
@@ -318,7 +322,7 @@ input:focus ~ span{
     transform: translateX(10px) translate(-7px);
     font-size: 0.65em;
     padding: 0 10px;
-    background-color: var(--fondo);
+    background-color: var(--input);
 
 }
 .datos h1{
