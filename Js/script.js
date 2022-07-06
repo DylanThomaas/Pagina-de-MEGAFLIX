@@ -310,11 +310,6 @@ function guardarlocalstorage(){
     localStorage.setItem("codigo", codigo);
 };
 
-/*---- ---- TERMINO REGISTRAR ---- ---- */
-
-
-
-
 $(document).ready(function(){
     $("#buscador").keyup(function(){
         Funcion();
@@ -325,9 +320,6 @@ $(document).ready(function(){
         console.log("hola")
     });
 });
-$(document).ready(function(){
-
-});
 
 function Funcion(){
 
@@ -337,7 +329,6 @@ function Funcion(){
         console.log("hola")
         error=true
     }
-
 }
 
 
