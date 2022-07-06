@@ -331,7 +331,7 @@ $(document).ready(function(){
 
 function Funcion(){
 
-    if(($("#categoria option:selected").val()==1)){
+    if(($("#categoria option:selected").val()=="1")){
         $("#accion").hide();
         $("#terror").hide();
         console.log("hola")
