@@ -212,6 +212,7 @@ form.addEventListener("submit", e=>{
                 console.log("entro") 
                if(error==0){
                 form.reset();
+                alert("Su registro fue exitoso")
                } else{
                 alert('Debe llenar todos los campos como corresponde')
                }
@@ -309,27 +310,6 @@ function guardarlocalstorage(){
     localStorage.setItem("tarjeta", tarjeta);
     localStorage.setItem("codigo", codigo);
 };
-
-$(document).ready(function(){
-    $("#buscador").keyup(function(){
-        Funcion();
-        console.log("hola")   
-    });
-    $('select[name="categoria"]').change(function(){
-        Funcion();
-        console.log("hola")
-    });
-});
-
-function Funcion(){
-
-    if(($("#categoria option:selected").val()=="1")){
-        $("#accion").hide();
-        $("#terror").hide();
-        console.log("hola")
-        error=true
-    }
-}
 
 
 
