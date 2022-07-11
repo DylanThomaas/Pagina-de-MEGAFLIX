@@ -30,17 +30,27 @@
                         <h1>Usuario</h1>
                     </div>
                     <div class="datos">
-                        <h2>Email: DesarrolloWeb@gmail.com </h2>
-                        <h2>Contraseña: Unlam123</h2>
+                        <script>document.write("<h2>Email:"+localStorage.correo+"</h2>")</script>
+                        <script>document.write("<h2>Contraseña:"+localStorage.contraseña+"</h2>")</script>
                         <form action="#" method="post" id="form">
-                            <div class="inputBox">
+                            <div class="inputBox" id="grupoContraseña" >
+                                    <input type="password"  id="contraseña" name="contraseña" >
+                                    <span>Nueva Contraseña</span>
+                                    <p id="mensajeErrorContraseña"></p>
+                                </div>
+                                <div class="inputBox" id="grupoRepetir">
+                                    <input type="password"  id="repetir" name="repetir"  >
+                                    <span>Repetir Contraseña</span>
+                                    <p id="mensajeErrorRepetir"></p>
+                                </div>                               
+                           <!--  <div class="inputBox">
                                 <input type="text"  id="nueva" name="nueva" >
                                 <span>Nueva Contraseña</span>
                             </div>
                             <div class="inputBox">
                                 <input type="text"  id="nueva" name="nueva"   >
                                 <span>Repetir Contraseña</span>
-                            </div>
+                            </div>  -->
                         </form>
                     </div>
                     <div class="datos">
@@ -66,7 +76,7 @@
 
                     </div>
                     <div class="box A">
-                        <a href="index.html"><input class="bton" type="submit" name="cambios " value="Guardar cambios"></a>
+                        <a><input class="bton" type="submit" name="cambios " value="Guardar cambios" onclick="cambiarContraseña()"></a>
                         <a href="index.html"><input class="bton" type="button" name="cancelar " value="Cancelar"> </a>
                     </div>
                 </div> 

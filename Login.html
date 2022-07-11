@@ -14,7 +14,7 @@
 	<main class="inicio">
 		<section class="contenedor">
 			<div class="login">
-				<form action="index.html" method="post" id="form" name="formulario">
+				<form  id="form" name="formulario">
 					<div class="inputBox" id="grupoUsuario" >
 						<input class="inputLogin"  type="text"  id="usuario" name="usuario"  >
 						<span>Nombre de Usuario</span>
@@ -26,15 +26,18 @@
 						<p id="mensajeErrorContraseña">.</p>
 					</div>
 					
-					<div>
-						<br>
-						<button class="bton" name="confirmar" onclick=confirmarInicio()>Iniciar Sesion</button> 
-					</div>
+					
 				</form>
+				<div>
+					
+					<button class="bton" name="confirmar" onclick=confirmarInicio()>Iniciar Sesion</button> 
+					
+				</div>
 			</div>
 		</section>
 		<section>
 			<p>
+				<br>
 				<a href="Recuperar_contraseña.html"> Recuperar Contraseña </a> <br>
 				<a href="Registrar.html"> Registrarse </a>
 			</p>
