@@ -14,6 +14,7 @@ const inputs=document.querySelectorAll('#form input');
 let confirmar=document.getElementsByName('confirmar');
 let radio=false;
 let error=0;
+var comprobante=false;
 const campos = {
 	nombre: false,
     apellido: false,
@@ -213,6 +214,9 @@ form.addEventListener("submit", e=>{
                if(error==0){
                 form.reset();
                 alert("Su registro fue exitoso")
+                if(comprobante==true){
+                location.href='Login.html'
+                }
                } else{
                 alert('Debe llenar todos los campos como corresponde')
                }
@@ -290,6 +294,7 @@ function comprobarOK(){
     }
 }
 
+
 function guardarlocalstorage(){ 
 
     let nombre=document.getElementById("nombre").value;
@@ -312,6 +317,28 @@ function guardarlocalstorage(){
 };
 
 
+function confirmarInicio(){
+    //comprobante=false;
+    let usuarioGuardado = document.getElementById("usuario").value;
+    let contraseñaGuardada = document.getElementById("contraseña").value;
+    
 
+    if(usuarioGuardado==localStorage.usuario && contraseñaGuardada==localStorage.contraseña){
+        
+        alert("entro");
+        location.href="index.html";
+    }
+    else{
+        alert('usuario o contraseña incorrectos');
+        
+    }
+};
 
+function confirmarRegistro(){
+   comprobante=true;
+};
 
+function cambiarContraseña(){
+    error=0
+      
+};
