@@ -114,7 +114,7 @@ header .contenedor{
 h3{
     color: var(--letra);
     padding: 10px;
-    width: 70%;
+    /* width: 70%; */
 }
 input{
     border-radius: 5px;
@@ -226,7 +226,6 @@ form .select{
 .formBuscador{
     display: flex;
     align-items: center;
-    width: 100%;
     margin-left: 60px;
 }
 .buscar{
@@ -741,8 +740,12 @@ main .boton.activo{
     }
     .descripcion{
         width: 100%;}
+    .buscadores{
+        padding-left:0px;
+
+        flex-wrap: wrap;}
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:525px){
     .contenedor{
         width: 100%;
     }
@@ -754,4 +757,19 @@ main .boton.activo{
     }
     .descripcion{
         width: 100%;}
+    .buscadores{
+        padding-left:0px;
+        flex-wrap: wrap;
+    }
+    header{
+        color: #fff;
+    }
+    .formBuscador {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0px;
+    }
+    form .select {
+        width: 60%;}
+
 }
