@@ -114,7 +114,7 @@ header .contenedor{
 h3{
     color: var(--letra);
     padding: 10px;
-    /* width: 70%; */
+    width: 70%;
 }
 input{
     border-radius: 5px;
@@ -220,9 +220,10 @@ form .select{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 90%;
     padding-left:90px;
 }
+
 .formBuscador{
     display: flex;
     align-items: center;
@@ -744,10 +745,13 @@ main .boton.activo{
         padding-left:0px;
 
         flex-wrap: wrap;}
+    header{
+        padding: 10px;
+    }
 }
 @media screen and (max-width:525px){
     .contenedor{
-        width: 100%;
+        width: 110%;
     }
     main{
         width: 100%;
@@ -762,14 +766,20 @@ main .boton.activo{
         flex-wrap: wrap;
     }
     header{
-        color: #fff;
+        padding: 10px;
     }
     .formBuscador {
         flex-wrap: wrap;
         justify-content: center;
-        margin-left: 0px;
+        margin-left: 40px;
     }
     form .select {
-        width: 60%;}
+        width: 80%;}
+    .muestras{
+        margin:auto;
+    }
 
+}
+.noMostrar{
+    display: none;
 }

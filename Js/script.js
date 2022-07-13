@@ -325,7 +325,7 @@ function confirmarInicio(){
 
     if(usuarioGuardado==localStorage.usuario && contraseñaGuardada==localStorage.contraseña){
         
-        alert("entro");
+        alert("Ha iniciado sesion con exito");
         location.href="index.html";
     }
     else{

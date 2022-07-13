@@ -27,7 +27,7 @@
                 <div class="perfil">
                     <div class="datos">
                         <img src="img/persona.png"/>
-                        <h1>Usuario</h1>
+                        <script>document.write("<h1>"+localStorage.usuario+"</h1>")</script>
                     </div>
                     <div class="datos">
                         <script>document.write("<h2>Email:"+localStorage.correo+"</h2>")</script>
@@ -43,14 +43,6 @@
                                     <span>Repetir Contraseña</span>
                                     <p id="mensajeErrorRepetir"></p>
                                 </div>                               
-                           <!--  <div class="inputBox">
-                                <input type="text"  id="nueva" name="nueva" >
-                                <span>Nueva Contraseña</span>
-                            </div>
-                            <div class="inputBox">
-                                <input type="text"  id="nueva" name="nueva"   >
-                                <span>Repetir Contraseña</span>
-                            </div>  -->
                         </form>
                     </div>
                     <div class="datos">

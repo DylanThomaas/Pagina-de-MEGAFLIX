@@ -1,15 +1,11 @@
 
-
-
 $(document).ready(function(){
-    $("#buscador").keyup(function(){
-        Funcion()
-    });
     $('select[name="categoria"]').change(function(){
         Funcion();
 
     });
 });
+
 
 function Funcion(){
 
@@ -53,4 +49,20 @@ function Funcion(){
         $("#suspenso").show();
     }
 
+}
+
+document.addEventListener("keyup", e=>{
+
+    if (e.target.matches("#buscador")){
+        document.querySelectorAll(".carta").forEach(elemento =>{
+            elemento.id.toLowerCase().includes(e.target.value.toLowerCase())
+              ?elemento.classList.remove("noMostrar")
+              :elemento.classList.add("noMostrar")
+        })
+    }
+  })
+
+function cerrarSesion (){
+    localStorage.clear();
+    location.href='Login.html'
 }
