@@ -338,7 +338,20 @@ function confirmarRegistro(){
    comprobante=true;
 };
 
-function cambiarContraseña(){
-    error=0
-      
-};
+document.addEventListener("keyup", e=>{
+
+    if (e.target.matches("#buscador")){
+  
+        if (e.key ==="Escape")e.target.value = ""
+  
+        document.querySelectorAll(".carta").forEach(elemento =>{
+            elemento.name
+            elemento.id.toLowerCase().includes(e.target.id.toLowerCase())
+              ?elemento.classList.remove("noMostrar")
+              :elemento.classList.add("noMostra")
+        })
+  
+    }
+  
+  
+  })

@@ -755,3 +755,7 @@ main .boton.activo{
     .descripcion{
         width: 100%;}
 }
+
+.noMostrar{
+    display: none;
+}
